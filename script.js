@@ -30,7 +30,8 @@
                 // Ease out cubic
                 const eased = 1 - Math.pow(1 - progress, 3);
                 const current = Math.round(eased * target);
-                counter.textContent = current >= target ? (target === 500 ? '500+' : target + '+') : current;
+                const suffix = (target === 500) ? '+' : (target <= 11 ? '+' : '');
+                counter.textContent = current >= target ? target + suffix : current;
                 if (progress < 1) {
                     requestAnimationFrame(update);
                 }

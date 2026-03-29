@@ -664,6 +664,83 @@ img {
     color: var(--text-tertiary);
 }
 
+/* --- About Quote --- */
+.about-quote {
+    margin: 24px 0 0;
+    padding: 16px 20px;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-glow);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Writing --- */
+.writing {
+    background: var(--bg-elevated);
+}
+
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.writing-card {
+    display: block;
+    padding: 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    position: relative;
+}
+
+.writing-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+}
+
+.writing-card::after {
+    content: '\2197';
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 1.1rem;
+    color: var(--text-tertiary);
+    transition: var(--transition);
+}
+
+.writing-card:hover::after {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+}
+
+.writing-date {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.writing-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 8px 0 12px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    padding-right: 24px;
+}
+
+.writing-source {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
 /* --- Connect --- */
 .connect {
     background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
@@ -809,6 +886,10 @@ img {
     .connect-link {
         min-width: auto;
         width: 100%;
+    }
+
+    .writing-grid {
+        grid-template-columns: 1fr;
     }
 }
 
